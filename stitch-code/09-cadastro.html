@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .font-manrope {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed-variant": "#005228",
+                      "secondary": "#006d37",
+                      "on-primary-fixed-variant": "#404273",
+                      "inverse-surface": "#2e3132",
+                      "surface": "#f8f9fa",
+                      "background": "#f8f9fa",
+                      "primary-fixed-dim": "#c1c1fc",
+                      "surface-bright": "#f8f9fa",
+                      "on-primary-fixed": "#141545",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-container": "#8e80b8",
+                      "on-tertiary": "#ffffff",
+                      "surface-variant": "#e1e3e4",
+                      "surface-container": "#edeeef",
+                      "on-secondary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "error": "#ba1a1a",
+                      "on-tertiary-fixed": "#1f1244",
+                      "on-tertiary-fixed-variant": "#4b3f72",
+                      "tertiary-fixed": "#e8deff",
+                      "secondary-container": "#6bfe9c",
+                      "surface-tint": "#585a8d",
+                      "primary-container": "#1a1b4b",
+                      "tertiary-fixed-dim": "#cdbefa",
+                      "tertiary-container": "#241849",
+                      "surface-container-highest": "#e1e3e4",
+                      "inverse-on-surface": "#f0f1f2",
+                      "surface-dim": "#d9dadb",
+                      "on-secondary-fixed": "#00210c",
+                      "surface-container-high": "#e7e8e9",
+                      "on-surface": "#191c1d",
+                      "on-background": "#191c1d",
+                      "on-primary-container": "#8384ba",
+                      "on-primary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "inverse-primary": "#c1c1fc",
+                      "outline": "#777680",
+                      "tertiary": "#0c0030",
+                      "primary-fixed": "#e1e0ff",
+                      "on-surface-variant": "#46464f",
+                      "outline-variant": "#c8c5d0",
+                      "on-secondary-container": "#00743a",
+                      "secondary-fixed": "#6bfe9c",
+                      "surface-container-low": "#f3f4f5",
+                      "on-error": "#ffffff",
+                      "secondary-fixed-dim": "#4ae183",
+                      "primary": "#020135"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "sm": "8px",
+                      "md": "16px",
+                      "container-margin": "20px",
+                      "unit": "4px",
+                      "xs": "4px",
+                      "xl": "32px",
+                      "lg": "24px",
+                      "gutter": "16px"
+              },
+              "fontFamily": {
+                      "numeric-xl": ["Manrope"],
+                      "h1": ["Manrope"],
+                      "display": ["Manrope"],
+                      "h2": ["Manrope"],
+                      "body-lg": ["Inter"],
+                      "body-md": ["Inter"],
+                      "label-caps": ["Inter"]
+              },
+              "fontSize": {
+                      "numeric-xl": ["36px", {"lineHeight": "44px", "fontWeight": "700"}],
+                      "h1": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "display": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "h2": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed-dim min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full flex items-center justify-between px-5 h-16 bg-slate-50 border-b border-slate-200 shadow-sm z-50">
+<div class="flex items-center gap-3">
+<span class="text-lg font-extrabold tracking-tighter text-indigo-950 uppercase font-manrope">Restart</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-slate-100 transition-colors active:scale-95 duration-200 text-slate-500">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col items-center justify-center pt-24 pb-12 px-container-margin">
+<div class="w-full max-w-md bg-surface-container-lowest p-xl rounded-xl shadow-[0_4px_20px_rgba(26,27,75,0.04)] border border-surface-variant">
+<!-- Welcome Header -->
+<div class="text-center mb-xl">
+<h1 class="font-h1 text-h1 text-primary mb-sm">Criar conta</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Comece sua jornada para a liberdade financeira com o Restart.</p>
+</div>
+<!-- Signup Form -->
+<form class="space-y-lg">
+<!-- Nome Completo -->
+<div class="space-y-xs">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase" for="name">Nome completo</label>
+<div class="relative">
+<input class="w-full px-md py-4 rounded-lg border border-outline-variant bg-surface-bright focus:ring-0 focus:border-on-tertiary-container transition-all placeholder:text-outline font-body-md" id="name" placeholder="Como deseja ser chamado?" type="text"/>
+</div>
+</div>
+<!-- CPF -->
+<div class="space-y-xs">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase" for="cpf">CPF</label>
+<div class="relative">
+<input class="w-full px-md py-4 rounded-lg border border-outline-variant bg-surface-bright focus:ring-0 focus:border-on-tertiary-container transition-all placeholder:text-outline font-body-md" id="cpf" placeholder="000.000.000-00" type="text"/>
+</div>
+</div>
+<!-- E-mail -->
+<div class="space-y-xs">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase" for="email">E-mail</label>
+<div class="relative">
+<input class="w-full px-md py-4 rounded-lg border border-outline-variant bg-surface-bright focus:ring-0 focus:border-on-tertiary-container transition-all placeholder:text-outline font-body-md" id="email" placeholder="seu@email.com" type="email"/>
+</div>
+</div>
+<!-- Telefone -->
+<div class="space-y-xs">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase" for="phone">Telefone</label>
+<div class="relative">
+<input class="w-full px-md py-4 rounded-lg border border-outline-variant bg-surface-bright focus:ring-0 focus:border-on-tertiary-container transition-all placeholder:text-outline font-body-md" id="phone" placeholder="(00) 00000-0000" type="tel"/>
+</div>
+</div>
+<!-- Senhas Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<!-- Senha -->
+<div class="space-y-xs">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase" for="password">Senha</label>
+<div class="relative">
+<input class="w-full px-md py-4 rounded-lg border border-outline-variant bg-surface-bright focus:ring-0 focus:border-on-tertiary-container transition-all placeholder:text-outline font-body-md" id="password" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<!-- Confirmar Senha -->
+<div class="space-y-xs">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase" for="confirm_password">Confirmar senha</label>
+<div class="relative">
+<input class="w-full px-md py-4 rounded-lg border border-outline-variant bg-surface-bright focus:ring-0 focus:border-on-tertiary-container transition-all placeholder:text-outline font-body-md" id="confirm_password" placeholder="••••••••" type="password"/>
+</div>
+</div>
+</div>
+<!-- Terms and Privacy -->
+<div class="flex items-start gap-md pt-sm">
+<div class="flex items-center h-5">
+<input class="w-5 h-5 text-secondary border-outline-variant rounded focus:ring-0 transition-colors" id="terms" type="checkbox"/>
+</div>
+<label class="font-body-md text-[14px] text-on-surface-variant leading-tight" for="terms">
+                        Eu concordo com os <a class="text-on-primary-fixed-variant font-semibold hover:underline" href="#">Termos de Uso</a> e a <a class="text-on-primary-fixed-variant font-semibold hover:underline" href="#">Política de Privacidade</a> do Restart.
+                    </label>
+</div>
+<!-- Primary Action -->
+<div class="pt-md">
+<button class="w-full h-14 bg-primary text-on-primary font-bold rounded-lg shadow-lg active:scale-[0.98] transition-all hover:bg-tertiary-container hover:text-on-tertiary-container" type="submit">
+                        Criar minha conta
+                    </button>
+</div>
+</form>
+<!-- Secondary Action -->
+<div class="mt-xl text-center">
+<p class="font-body-md text-on-surface-variant">
+                    Já possui uma conta? <a class="text-primary font-bold hover:underline" href="#">Fazer login</a>
+</p>
+</div>
+</div>
+<!-- Footer Visual (Minimalist) -->
+<div class="mt-xl flex flex-col items-center opacity-40">
+<div class="flex gap-md mb-md">
+<span class="material-symbols-outlined text-[24px]" data-icon="security">security</span>
+<span class="material-symbols-outlined text-[24px]" data-icon="verified_user">verified_user</span>
+<span class="material-symbols-outlined text-[24px]" data-icon="lock">lock</span>
+</div>
+<p class="font-label-caps text-label-caps">Ambiente seguro e criptografado</p>
+</div>
+</main>
+<!-- Side Decoration (Asymmetric Element for High-End feel) -->
+<div class="hidden lg:block fixed -right-32 top-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-100/30 rounded-full blur-3xl pointer-events-none"></div>
+<div class="hidden lg:block fixed -left-32 bottom-0 w-[500px] h-[500px] bg-secondary-container/10 rounded-full blur-[100px] pointer-events-none"></div>
+</body></html>

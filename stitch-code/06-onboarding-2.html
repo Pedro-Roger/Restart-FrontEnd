@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#005228",
+                        "secondary": "#006d37",
+                        "on-primary-fixed-variant": "#404273",
+                        "inverse-surface": "#2e3132",
+                        "surface": "#f8f9fa",
+                        "background": "#f8f9fa",
+                        "primary-fixed-dim": "#c1c1fc",
+                        "surface-bright": "#f8f9fa",
+                        "on-primary-fixed": "#141545",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#8e80b8",
+                        "on-tertiary": "#ffffff",
+                        "surface-variant": "#e1e3e4",
+                        "surface-container": "#edeeef",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#1f1244",
+                        "on-tertiary-fixed-variant": "#4b3f72",
+                        "tertiary-fixed": "#e8deff",
+                        "secondary-container": "#6bfe9c",
+                        "surface-tint": "#585a8d",
+                        "primary-container": "#1a1b4b",
+                        "tertiary-fixed-dim": "#cdbefa",
+                        "tertiary-container": "#241849",
+                        "surface-container-highest": "#e1e3e4",
+                        "inverse-on-surface": "#f0f1f2",
+                        "surface-dim": "#d9dadb",
+                        "on-secondary-fixed": "#00210c",
+                        "surface-container-high": "#e7e8e9",
+                        "on-surface": "#191c1d",
+                        "on-background": "#191c1d",
+                        "on-primary-container": "#8384ba",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#c1c1fc",
+                        "outline": "#777680",
+                        "tertiary": "#0c0030",
+                        "primary-fixed": "#e1e0ff",
+                        "on-surface-variant": "#46464f",
+                        "outline-variant": "#c8c5d0",
+                        "on-secondary-container": "#00743a",
+                        "secondary-fixed": "#6bfe9c",
+                        "surface-container-low": "#f3f4f5",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#4ae183",
+                        "primary": "#020135"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "8px",
+                        "md": "16px",
+                        "container-margin": "20px",
+                        "unit": "4px",
+                        "xs": "4px",
+                        "xl": "32px",
+                        "lg": "24px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "numeric-xl": ["Manrope"],
+                        "h1": ["Manrope"],
+                        "display": ["Manrope"],
+                        "h2": ["Manrope"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    "fontSize": {
+                        "numeric-xl": ["36px", {"lineHeight": "44px", "fontWeight": "700"}],
+                        "h1": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "display": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "h2": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f8f9fa;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="antialiased text-on-surface">
+<!-- Top Navigation Shell (Onboarding Context: No Search/Back unless needed) -->
+<header class="fixed top-0 left-0 w-full flex items-center justify-between px-5 h-16 bg-slate-50 border-b border-slate-200 z-50">
+<div class="flex items-center gap-sm">
+<button class="p-2 -ml-2 rounded-full hover:bg-slate-100 active:scale-95 duration-200">
+<span class="material-symbols-outlined text-indigo-950">arrow_back</span>
+</button>
+</div>
+<div class="text-lg font-extrabold tracking-tighter text-indigo-950 uppercase font-manrope">
+            Restart
+        </div>
+<div class="w-10"></div> <!-- Spacer for balance -->
+</header>
+<main class="min-h-screen flex flex-col pt-16 pb-24 px-container-margin">
+<!-- Hero Illustration Section -->
+<div class="flex-grow flex flex-col items-center justify-center py-lg">
+<div class="relative w-full max-w-sm aspect-square mb-xl flex items-center justify-center">
+<!-- Decorative Background Element -->
+<div class="absolute inset-0 bg-gradient-to-tr from-primary-fixed to-white rounded-full opacity-20 blur-3xl"></div>
+<!-- Illustration Content -->
+<div class="relative z-10 w-full h-full flex flex-col items-center justify-center">
+<img alt="Financial Connectivity Illustration" class="w-4/5 h-4/5 object-contain rounded-3xl" data-alt="A sophisticated 3D digital illustration representing secure financial connectivity. A central glowing icon of a golden padlock sits between a sleek smartphone interface and a stylized bank building. Soft, translucent blue and purple light beams connect the devices, symbolizing safe data transfer. The background is a clean, minimalist off-white gallery space with gentle shadows, reinforcing a sense of high-security fintech professionalism and corporate modern aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKUE_y28IdILsp5cqTjC3p9H9HOABpc2wU7k_v1LCDpnqbt3UtJk9j0oMMTANs40bXq6Usa6a1ntVZkZ0wMm_yNAIu7rJViB9Iu2mVpmxRNFH9T14ZvezS0H7yCpxKapsJc9AL17a5lBvbgO--m93oNBk-J7MGl2eB2mk2yEKfbrNBA-kZl-Nr194phEkggo0xuciQfWpb3zQqPzq57po4PB2nUvX89lwyZMGWyWNN6bR-N45zVhkF237XtR-4XXEnQ2Y2BCzcGdE"/>
+<!-- Floating Badge Moment of Delight -->
+<div class="absolute top-1/4 right-0 bg-white shadow-[0_10px_30px_rgba(26,27,75,0.12)] p-md rounded-2xl flex items-center gap-sm border border-slate-100">
+<div class="w-10 h-10 bg-secondary-container rounded-full flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shield</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-0.5">ESTADO</p>
+<p class="font-body-md text-body-md font-bold text-secondary">Protegido</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Content Section -->
+<div class="text-center space-y-md">
+<h1 class="font-h1 text-h1 text-primary tracking-tight">
+                    Conecte sua vida financeira
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-[320px] mx-auto">
+                    Com sua autorização, usamos Open Finance para acompanhar sua evolução com segurança.
+                </p>
+</div>
+</div>
+<!-- Sticky Bottom Controls -->
+<div class="fixed bottom-0 left-0 w-full px-container-margin pb-xl pt-lg bg-gradient-to-t from-background via-background to-transparent">
+<!-- Progress Dots -->
+<div class="flex justify-center gap-sm mb-lg">
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+<div class="w-6 h-2 rounded-full bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+</div>
+<!-- Primary Action -->
+<button class="w-full h-14 bg-primary text-white font-body-lg font-bold rounded-xl shadow-[0_10px_30px_rgba(2,1,53,0.12)] active:scale-[0.98] transition-all hover:bg-tertiary">
+                Próximo
+            </button>
+<p class="text-center mt-md font-label-caps text-label-caps text-outline">
+                Sua segurança é nossa prioridade
+            </p>
+</div>
+</main>
+<!-- Success Feedback Overlay (Hidden by default, used for interaction concept) -->
+<div class="hidden fixed inset-0 bg-white/80 backdrop-blur-sm z-50 flex items-center justify-center">
+<div class="bg-white p-xl rounded-3xl shadow-xl text-center max-w-xs border border-slate-100">
+<div class="w-20 h-20 bg-secondary-container text-on-secondary-container rounded-full flex items-center justify-center mx-auto mb-md">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<h2 class="font-h2 text-h2 text-primary">Conexão Segura</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-sm">Estamos prontos para analisar seus dados.</p>
+</div>
+</div>
+</body></html>

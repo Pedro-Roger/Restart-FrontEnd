@@ -1,0 +1,23 @@
+{
+  "expo": {
+    "name": "Restart Financial Evolution",
+    "slug": "restart-financial-evolution",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": [
+      "assets/**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#07130F"
+      }
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}

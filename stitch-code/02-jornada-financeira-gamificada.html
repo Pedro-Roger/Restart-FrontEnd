@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Restart - Financial Journey</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Manrope:wght@400;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#edeeef",
+                        "tertiary-fixed": "#e8deff",
+                        "on-primary-fixed-variant": "#404273",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#2e3132",
+                        "on-secondary-container": "#00743a",
+                        "surface-container-high": "#e7e8e9",
+                        "on-primary-container": "#8384ba",
+                        "on-tertiary-container": "#8e80b8",
+                        "inverse-primary": "#c1c1fc",
+                        "surface-variant": "#e1e3e4",
+                        "on-surface-variant": "#46464f",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#6bfe9c",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#0c0030",
+                        "on-tertiary-fixed": "#1f1244",
+                        "tertiary-fixed-dim": "#cdbefa",
+                        "primary-fixed-dim": "#c1c1fc",
+                        "on-surface": "#191c1d",
+                        "surface-bright": "#f8f9fa",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#241849",
+                        "primary-fixed": "#e1e0ff",
+                        "on-secondary-fixed-variant": "#005228",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "primary-container": "#1a1b4b",
+                        "on-secondary-fixed": "#00210c",
+                        "outline": "#777680",
+                        "on-background": "#191c1d",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#141545",
+                        "surface": "#f8f9fa",
+                        "secondary": "#006d37",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#d9dadb",
+                        "secondary-fixed-dim": "#4ae183",
+                        "secondary-container": "#6bfe9c",
+                        "inverse-on-surface": "#f0f1f2",
+                        "surface-container-low": "#f3f4f5",
+                        "primary": "#020135",
+                        "background": "#f8f9fa",
+                        "outline-variant": "#c8c5d0",
+                        "on-tertiary-fixed-variant": "#4b3f72",
+                        "surface-tint": "#585a8d",
+                        "surface-container-highest": "#e1e3e4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "24px",
+                        "xs": "4px",
+                        "xl": "32px",
+                        "md": "16px",
+                        "unit": "4px",
+                        "sm": "8px",
+                        "container-margin": "20px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "h2": ["Manrope"],
+                        "label-caps": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "h1": ["Manrope"],
+                        "body-md": ["Inter"],
+                        "numeric-xl": ["Manrope"],
+                        "display": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "h2": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "h1": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "numeric-xl": ["36px", { "lineHeight": "44px", "fontWeight": "700" }],
+                        "display": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Hide scrollbar for clean app-like feel */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        body {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md antialiased pb-24 md:pb-0">
+<!-- TopAppBar -->
+<header class="bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-sm fixed top-0 left-0 w-full flex items-center justify-between px-5 h-16 z-50">
+<div class="flex items-center gap-sm">
+<div class="relative w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center overflow-hidden border border-outline-variant">
+<img alt="User Profile Avatar" class="w-full h-full object-cover" data-alt="A high-quality, professional headshot of a young adult user set against a clean, light-mode background. The lighting is soft and flattering, highlighting the subject's face clearly. The image is cropped tightly in a circular format, indicative of a modern app profile picture. The overall aesthetic is clean, trustworthy, and aligns with a premium fintech application." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZ8BJtr-avHRfIXI49T2T-25nE8OMnRaYwfgdPinMhoNZS-aOmJeZMDyQqH7XiVioZsZ1WgWb2X3Rkac6a5C8CqKRSuCF1mTOG42MkiMFxGdlaZZbe12VjgRPHarI7eyI6PgEhXboK_wvQFqewbnj1_Et0RBMW3sZ1e-zoErz7sRUNQmPg1zF6EYRXKA6-Z-IU8lAMriXBI99BFdTCMUPWnIBAfwG03hThzJDc3kQ6SuXv0pWs4xKqxnprbz1j95fCUou78mhBSZ8"/>
+<div class="absolute bottom-0 right-0 w-3 h-3 bg-secondary rounded-full border border-surface-container-lowest flex items-center justify-center">
+<span class="text-[6px] text-on-secondary font-bold">5</span>
+</div>
+</div>
+</div>
+<div class="text-lg font-extrabold tracking-tighter text-indigo-950 dark:text-white uppercase font-manrope antialiased tracking-tight">
+            Restart
+        </div>
+<button class="text-indigo-900 dark:text-indigo-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors active:scale-95 duration-200 p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="pt-24 px-container-margin max-w-lg mx-auto w-full flex flex-col gap-lg">
+<!-- Header & Accumulated Rewards -->
+<section class="flex flex-col gap-sm">
+<h1 class="font-h1 text-h1 text-primary">Your Journey</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Complete missions to level up your financial health.</p>
+<div class="mt-xs bg-primary text-on-primary rounded-xl p-md flex items-center justify-between shadow-lg relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-r from-primary-container to-transparent opacity-50 z-0"></div>
+<div class="relative z-10 flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-surface-tint/20 flex items-center justify-center">
+<span class="material-symbols-outlined icon-fill text-secondary-container" style="font-size: 28px;">workspace_premium</span>
+</div>
+<div>
+<div class="font-label-caps text-label-caps text-primary-fixed-dim uppercase">Accumulated Rewards</div>
+<div class="font-numeric-xl text-numeric-xl">1,250 <span class="font-body-md text-body-md text-primary-fixed">XP</span></div>
+</div>
+</div>
+<button class="relative z-10 bg-secondary text-on-secondary px-sm py-xs rounded-lg font-label-caps text-label-caps flex items-center gap-xs">
+                    Redeem <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- Vertical Timeline Path -->
+<section class="relative mt-md pb-xl">
+<!-- Continuous Track Line -->
+<div class="absolute left-[23px] top-4 bottom-0 w-[2px] bg-outline-variant z-0"></div>
+<!-- Nodes -->
+<div class="flex flex-col gap-lg relative z-10">
+<!-- Concluded Node -->
+<div class="flex gap-md w-full opacity-70">
+<div class="w-12 flex-shrink-0 flex justify-center pt-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest border-2 border-secondary flex items-center justify-center shadow-sm relative bg-white">
+<span class="material-symbols-outlined text-secondary icon-fill" style="font-size: 20px;">check_circle</span>
+</div>
+</div>
+<div class="flex-grow bg-surface-container-lowest rounded-xl p-md shadow-sm border border-surface-variant">
+<div class="flex justify-between items-start mb-sm">
+<h3 class="font-h2 text-[18px] leading-tight text-on-surface">Connect Bank</h3>
+<span class="bg-surface-container text-on-surface-variant font-label-caps text-label-caps px-2 py-1 rounded-md flex items-center gap-xs">
+                                +50 XP
+                            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Securely linked your primary account.</p>
+</div>
+</div>
+<!-- Active/Pulsing Node -->
+<div class="flex gap-md w-full relative">
+<div class="w-12 flex-shrink-0 flex justify-center pt-2">
+<div class="relative w-8 h-8 rounded-full bg-secondary flex items-center justify-center shadow-md">
+<!-- Simple pulse effect via absolute ring -->
+<div class="absolute inset-0 rounded-full border-2 border-secondary opacity-50 scale-125"></div>
+<span class="material-symbols-outlined text-on-secondary icon-fill" style="font-size: 18px;">adjust</span>
+</div>
+</div>
+<div class="flex-grow bg-surface-container-lowest rounded-xl p-md shadow-md border border-secondary relative overflow-hidden">
+<div class="absolute top-0 right-0 w-16 h-16 bg-secondary-fixed/20 rounded-bl-full z-0"></div>
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-sm">
+<h3 class="font-h2 text-[18px] leading-tight text-primary">Pay Monthly Fee</h3>
+<span class="bg-secondary-fixed text-on-secondary-fixed-variant font-label-caps text-label-caps px-2 py-1 rounded-md flex items-center gap-xs font-bold">
+                                    +150 XP
+                                </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mb-md">Keep your account active to unlock premium tier benefits.</p>
+<button class="w-full bg-primary text-on-primary font-label-caps text-label-caps py-3 rounded-lg flex items-center justify-center gap-xs hover:bg-tertiary transition-colors">
+                                Pay Now <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- In Progress Node -->
+<div class="flex gap-md w-full">
+<div class="w-12 flex-shrink-0 flex justify-center pt-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest border-[3px] border-primary flex items-center justify-center shadow-sm bg-white">
+<div class="w-2.5 h-2.5 rounded-full bg-primary"></div>
+</div>
+</div>
+<div class="flex-grow bg-surface-container-lowest rounded-xl p-md shadow-sm border border-surface-variant">
+<div class="flex justify-between items-start mb-sm">
+<h3 class="font-h2 text-[18px] leading-tight text-on-surface">Recurring Bill</h3>
+<span class="bg-surface-container text-on-surface-variant font-label-caps text-label-caps px-2 py-1 rounded-md flex items-center gap-xs">
+                                +100 XP
+                            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mb-md">Set up an auto-payment for essential utilities.</p>
+<button class="w-full bg-transparent border-[1.5px] border-primary text-primary font-label-caps text-label-caps py-3 rounded-lg flex items-center justify-center gap-xs">
+                            Set Up
+                        </button>
+</div>
+</div>
+<!-- Locked Node -->
+<div class="flex gap-md w-full opacity-60">
+<div class="w-12 flex-shrink-0 flex justify-center pt-2">
+<div class="w-8 h-8 rounded-full bg-surface-container border-2 border-outline-variant flex items-center justify-center bg-white">
+<span class="material-symbols-outlined text-outline-variant" style="font-size: 16px;">lock</span>
+</div>
+</div>
+<div class="flex-grow bg-surface-container-low rounded-xl p-md border border-outline-variant/30">
+<div class="flex justify-between items-start mb-sm">
+<h3 class="font-h2 text-[18px] leading-tight text-on-surface-variant">30 Day Streak</h3>
+<span class="bg-surface-container-high text-outline font-label-caps text-label-caps px-2 py-1 rounded-md flex items-center gap-xs">
+                                +300 XP
+                            </span>
+</div>
+<p class="font-body-md text-body-md text-outline text-sm">Maintain a positive balance for 30 consecutive days.</p>
+</div>
+</div>
+<!-- Locked Node -->
+<div class="flex gap-md w-full opacity-60">
+<div class="w-12 flex-shrink-0 flex justify-center pt-2">
+<div class="w-8 h-8 rounded-full bg-surface-container border-2 border-outline-variant flex items-center justify-center bg-white">
+<span class="material-symbols-outlined text-outline-variant" style="font-size: 16px;">lock</span>
+</div>
+</div>
+<div class="flex-grow bg-surface-container-low rounded-xl p-md border border-outline-variant/30">
+<div class="flex justify-between items-start mb-sm">
+<h3 class="font-h2 text-[18px] leading-tight text-on-surface-variant">Financial Tip</h3>
+<span class="bg-surface-container-high text-outline font-label-caps text-label-caps px-2 py-1 rounded-md flex items-center gap-xs">
+                                +50 XP
+                            </span>
+</div>
+<p class="font-body-md text-body-md text-outline text-sm">Read the upcoming guide on mindful spending.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800 shadow-[0_-4px_20px_rgba(26,27,75,0.04)] fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-2 pb-safe docked full-width rounded-t-2xl md:hidden">
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-indigo-700 dark:hover:text-indigo-300 active:scale-90 transition-transform w-16 h-full gap-1">
+<span class="material-symbols-outlined text-[24px]">home</span>
+<span class="font-manrope text-[10px] font-semibold uppercase tracking-widest text-indigo-900 dark:text-indigo-400">Home</span>
+</button>
+<!-- Active Tab: Journey -->
+<button class="flex flex-col items-center justify-center text-indigo-900 dark:text-green-400 bg-indigo-50 dark:bg-indigo-900/20 rounded-xl px-3 py-1 hover:text-indigo-700 dark:hover:text-indigo-300 active:scale-90 transition-transform h-[80%] min-w-[64px] gap-1 border border-indigo-100 dark:border-indigo-800/30">
+<span class="material-symbols-outlined text-[24px] icon-fill">account_tree</span>
+<span class="font-manrope text-[10px] font-semibold uppercase tracking-widest text-indigo-900 dark:text-indigo-400">Journey</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-indigo-700 dark:hover:text-indigo-300 active:scale-90 transition-transform w-16 h-full gap-1">
+<span class="material-symbols-outlined text-[24px]">payments</span>
+<span class="font-manrope text-[10px] font-semibold uppercase tracking-widest text-indigo-900 dark:text-indigo-400">Payments</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-indigo-700 dark:hover:text-indigo-300 active:scale-90 transition-transform w-16 h-full gap-1">
+<span class="material-symbols-outlined text-[24px]">menu_book</span>
+<span class="font-manrope text-[10px] font-semibold uppercase tracking-widest text-indigo-900 dark:text-indigo-400">Learn</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-indigo-700 dark:hover:text-indigo-300 active:scale-90 transition-transform w-16 h-full gap-1">
+<span class="material-symbols-outlined text-[24px]">person</span>
+<span class="font-manrope text-[10px] font-semibold uppercase tracking-widest text-indigo-900 dark:text-indigo-400">Profile</span>
+</button>
+</nav>
+<!-- SideNav for Desktop (Hidden on mobile based on logic rules, acting as layout anchor) -->
+<aside class="hidden md:flex fixed left-0 top-16 bottom-0 w-64 bg-surface-container-lowest border-r border-surface-variant flex-col py-lg px-md z-40 gap-sm">
+<button class="flex items-center gap-md px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">home</span>
+<span class="font-body-md font-semibold">Home</span>
+</button>
+<button class="flex items-center gap-md px-md py-sm rounded-lg bg-secondary/10 text-secondary border border-secondary/20 transition-colors">
+<span class="material-symbols-outlined icon-fill">account_tree</span>
+<span class="font-body-md font-semibold">Journey</span>
+</button>
+<button class="flex items-center gap-md px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-body-md font-semibold">Payments</span>
+</button>
+<button class="flex items-center gap-md px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-body-md font-semibold">Learn</span>
+</button>
+<button class="flex items-center gap-md px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors mt-auto">
+<span class="material-symbols-outlined">person</span>
+<span class="font-body-md font-semibold">Profile</span>
+</button>
+</aside>
+</body></html>

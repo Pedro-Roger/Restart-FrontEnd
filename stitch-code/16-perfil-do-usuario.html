@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Manrope:wght@400;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#005228",
+                    "secondary": "#006d37",
+                    "on-primary-fixed-variant": "#404273",
+                    "inverse-surface": "#2e3132",
+                    "surface": "#f8f9fa",
+                    "background": "#f8f9fa",
+                    "primary-fixed-dim": "#c1c1fc",
+                    "surface-bright": "#f8f9fa",
+                    "on-primary-fixed": "#141545",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#8e80b8",
+                    "on-tertiary": "#ffffff",
+                    "surface-variant": "#e1e3e4",
+                    "surface-container": "#edeeef",
+                    "on-secondary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed": "#1f1244",
+                    "on-tertiary-fixed-variant": "#4b3f72",
+                    "tertiary-fixed": "#e8deff",
+                    "secondary-container": "#6bfe9c",
+                    "surface-tint": "#585a8d",
+                    "primary-container": "#1a1b4b",
+                    "tertiary-fixed-dim": "#cdbefa",
+                    "tertiary-container": "#241849",
+                    "surface-container-highest": "#e1e3e4",
+                    "inverse-on-surface": "#f0f1f2",
+                    "surface-dim": "#d9dadb",
+                    "on-secondary-fixed": "#00210c",
+                    "surface-container-high": "#e7e8e9",
+                    "on-surface": "#191c1d",
+                    "on-background": "#191c1d",
+                    "on-primary-container": "#8384ba",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "inverse-primary": "#c1c1fc",
+                    "outline": "#777680",
+                    "tertiary": "#0c0030",
+                    "primary-fixed": "#e1e0ff",
+                    "on-surface-variant": "#46464f",
+                    "outline-variant": "#c8c5d0",
+                    "on-secondary-container": "#00743a",
+                    "secondary-fixed": "#6bfe9c",
+                    "surface-container-low": "#f3f4f5",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#4ae183",
+                    "primary": "#020135"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "8px",
+                    "md": "16px",
+                    "container-margin": "20px",
+                    "unit": "4px",
+                    "xs": "4px",
+                    "xl": "32px",
+                    "lg": "24px",
+                    "gutter": "16px"
+            },
+            "fontFamily": {
+                    "numeric-xl": ["Manrope"],
+                    "h1": ["Manrope"],
+                    "display": ["Manrope"],
+                    "h2": ["Manrope"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "label-caps": ["Inter"]
+            },
+            "fontSize": {
+                    "numeric-xl": ["36px", {"lineHeight": "44px", "fontWeight": "700"}],
+                    "h1": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "display": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "h2": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f8f9fa;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full flex items-center justify-between px-5 h-16 bg-slate-50 border-b border-slate-200 shadow-sm z-50">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container">
+<img alt="User Profile Avatar" class="w-full h-full object-cover" data-alt="A professional and warm close-up portrait of a diverse woman with a confident smile, set against a soft-focus minimalist interior. The lighting is high-key and natural, emphasizing a bright and modern corporate aesthetic. The color palette features clean whites and soft grays, aligning with a high-end financial app interface for a calm and trustworthy user profile identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfmI2Q6F02s6fPoMVQ_NwW3UeDOjU2afniKD5FEZgYvVxERV5C2MMpCvEu5Dg6AfJYpWxO7GJngCb-_Vllas2R_j_esnJRnmupnKkw9rkeudJlvFgGaosfyyyIvJcjl1Rt9bG0he05P5vW-UjF5l7PdxPTJHzYRaCpUyG6KZyRZWx7o4J4pIVyNDceZyq4Z7gdgjtIcC4P-0ps5g6Xv11oWHNv5blhOUyCBoG97ie1CpCOCvsq9I1z-HSCwYSwaqmtyRkgO1EmGgA"/>
+</div>
+<span class="text-lg font-extrabold tracking-tighter text-indigo-950 uppercase font-manrope">Restart</span>
+</div>
+<div class="flex items-center gap-4 text-indigo-900">
+<button class="material-symbols-outlined hover:bg-slate-100 p-2 rounded-full transition-colors active:scale-95 duration-200" data-icon="notifications">notifications</button>
+</div>
+</header>
+<main class="pt-24 pb-32 px-container-margin max-w-2xl mx-auto">
+<!-- Profile Hero Section -->
+<section class="flex flex-col items-center mb-10">
+<div class="relative mb-4">
+<div class="w-24 h-24 rounded-full border-4 border-white shadow-lg overflow-hidden">
+<img alt="User Avatar" class="w-full h-full object-cover" data-alt="Detailed portrait of a professional individual against a bright, airy background, expressing a sense of calm and control. The lighting is soft and even, highlighting clear features and a friendly expression. The overall style is minimalist and high-end, using a sophisticated light mode palette that integrates seamlessly with a modern B2B2C financial platform identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzinZtYCbZHOYy4HQHXy-fs-7Rusn3CGD4WBAvOu9zX3wlImse9nX9G3v0pGit9vb9men2fPrLv7BiKe9xuiVY2NSKP3SsWHUsQMFdHW4VCvFOhp9gTGySl4JG91tZfXaE-dRwhnqSNmGl84qeQvFDjTKX3-usLuYZfawjHo053vQVFAZo4s_FQlQmUUjBaWTgtg-6GRS3Gdi70q-E04pqJUk15_lOGhQB0KH0PWlfYO6n--QL8rF1mGno5hbILMeg56ZPsigdGa4"/>
+</div>
+<div class="absolute bottom-0 right-0 bg-secondary-container text-on-secondary-container w-8 h-8 rounded-full flex items-center justify-center border-2 border-white shadow-md">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<h1 class="font-h2 text-h2 text-primary text-center">Ana Oliveira</h1>
+<p class="font-body-md text-on-surface-variant text-center">Nível de Ascensão: Ouro</p>
+</section>
+<!-- Stats Bento Grid -->
+<section class="grid grid-cols-2 gap-md mb-lg">
+<div class="bg-white p-md rounded-xl shadow-[0_4px_20px_rgba(26,27,75,0.04)] border border-slate-100">
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-1">PONTUAÇÃO</p>
+<p class="font-numeric-xl text-numeric-xl text-secondary">842</p>
+<div class="w-full bg-surface-container h-1 rounded-full mt-2">
+<div class="bg-secondary h-1 rounded-full" style="width: 84%;"></div>
+</div>
+</div>
+<div class="bg-white p-md rounded-xl shadow-[0_4px_20px_rgba(26,27,75,0.04)] border border-slate-100 flex flex-col justify-between">
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-1">CONEXÕES</p>
+<p class="font-h2 text-h2 text-primary">3 Bancos</p>
+</div>
+<span class="text-[12px] text-on-secondary-container bg-secondary-container/30 px-2 py-0.5 rounded-full self-start">Ativo</span>
+</div>
+</section>
+<!-- Settings List -->
+<section class="space-y-sm">
+<h2 class="font-label-caps text-label-caps text-outline px-2 mb-2">CONFIGURAÇÕES DA CONTA</h2>
+<!-- Option Item -->
+<div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(26,27,75,0.04)] border border-slate-100 overflow-hidden">
+<button class="w-full flex items-center justify-between p-md hover:bg-slate-50 transition-colors active:scale-[0.98] duration-200">
+<div class="flex items-center gap-md text-primary">
+<span class="material-symbols-outlined text-indigo-900/70" data-icon="person">person</span>
+<span class="font-body-md font-semibold">Dados pessoais</span>
+</div>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</button>
+<div class="mx-md border-t border-slate-100"></div>
+<button class="w-full flex items-center justify-between p-md hover:bg-slate-50 transition-colors active:scale-[0.98] duration-200">
+<div class="flex items-center gap-md text-primary">
+<span class="material-symbols-outlined text-indigo-900/70" data-icon="account_balance">account_balance</span>
+<span class="font-body-md font-semibold">Banco conectado</span>
+</div>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</button>
+<div class="mx-md border-t border-slate-100"></div>
+<button class="w-full flex items-center justify-between p-md hover:bg-slate-50 transition-colors active:scale-[0.98] duration-200">
+<div class="flex items-center gap-md text-primary text-left">
+<span class="material-symbols-outlined text-indigo-900/70" data-icon="share_reviews">share_reviews</span>
+<span class="font-body-md font-semibold">Gerenciar consentimento Open Finance</span>
+</div>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</button>
+</div>
+<h2 class="font-label-caps text-label-caps text-outline px-2 pt-4 mb-2">SEGURANÇA E LEGAL</h2>
+<div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(26,27,75,0.04)] border border-slate-100 overflow-hidden">
+<button class="w-full flex items-center justify-between p-md hover:bg-slate-50 transition-colors active:scale-[0.98] duration-200">
+<div class="flex items-center gap-md text-primary">
+<span class="material-symbols-outlined text-indigo-900/70" data-icon="security">security</span>
+<span class="font-body-md font-semibold">Segurança da conta</span>
+</div>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</button>
+<div class="mx-md border-t border-slate-100"></div>
+<button class="w-full flex items-center justify-between p-md hover:bg-slate-50 transition-colors active:scale-[0.98] duration-200">
+<div class="flex items-center gap-md text-primary">
+<span class="material-symbols-outlined text-indigo-900/70" data-icon="description">description</span>
+<span class="font-body-md font-semibold">Termos e privacidade</span>
+</div>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</button>
+</div>
+<button class="w-full flex items-center gap-md p-md mt-6 text-error font-semibold hover:bg-error-container/10 rounded-xl transition-colors active:scale-[0.98] duration-200">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-body-md">Sair da conta</span>
+</button>
+</section>
+<!-- Footer Version -->
+<p class="text-center text-outline text-[11px] mt-10 uppercase tracking-widest font-label-caps">Restart App v2.4.0</p>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-2 pb-safe bg-white border-t border-slate-100 shadow-[0_-4px_20px_rgba(26,27,75,0.04)] rounded-t-2xl">
+<button class="flex flex-col items-center justify-center text-slate-400 hover:text-indigo-700 transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-manrope text-[10px] font-semibold uppercase tracking-widest mt-1">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 hover:text-indigo-700 transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined" data-icon="account_tree">account_tree</span>
+<span class="font-manrope text-[10px] font-semibold uppercase tracking-widest mt-1">Journey</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 hover:text-indigo-700 transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-manrope text-[10px] font-semibold uppercase tracking-widest mt-1">Payments</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 hover:text-indigo-700 transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-manrope text-[10px] font-semibold uppercase tracking-widest mt-1">Learn</span>
+</button>
+<!-- ACTIVE TAB: Profile -->
+<button class="flex flex-col items-center justify-center text-indigo-900 bg-indigo-50 rounded-xl px-3 py-1 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-manrope text-[10px] font-semibold uppercase tracking-widest mt-1">Profile</span>
+</button>
+</nav>
+</body></html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#005228",
+                        "secondary": "#006d37",
+                        "on-primary-fixed-variant": "#404273",
+                        "inverse-surface": "#2e3132",
+                        "surface": "#f8f9fa",
+                        "background": "#f8f9fa",
+                        "primary-fixed-dim": "#c1c1fc",
+                        "surface-bright": "#f8f9fa",
+                        "on-primary-fixed": "#141545",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#8e80b8",
+                        "on-tertiary": "#ffffff",
+                        "surface-variant": "#e1e3e4",
+                        "surface-container": "#edeeef",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#1f1244",
+                        "on-tertiary-fixed-variant": "#4b3f72",
+                        "tertiary-fixed": "#e8deff",
+                        "secondary-container": "#6bfe9c",
+                        "surface-tint": "#585a8d",
+                        "primary-container": "#1a1b4b",
+                        "tertiary-fixed-dim": "#cdbefa",
+                        "tertiary-container": "#241849",
+                        "surface-container-highest": "#e1e3e4",
+                        "inverse-on-surface": "#f0f1f2",
+                        "surface-dim": "#d9dadb",
+                        "on-secondary-fixed": "#00210c",
+                        "surface-container-high": "#e7e8e9",
+                        "on-surface": "#191c1d",
+                        "on-background": "#191c1d",
+                        "on-primary-container": "#8384ba",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#c1c1fc",
+                        "outline": "#777680",
+                        "tertiary": "#0c0030",
+                        "primary-fixed": "#e1e0ff",
+                        "on-surface-variant": "#46464f",
+                        "outline-variant": "#c8c5d0",
+                        "on-secondary-container": "#00743a",
+                        "secondary-fixed": "#6bfe9c",
+                        "surface-container-low": "#f3f4f5",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#4ae183",
+                        "primary": "#020135"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "8px",
+                        "md": "16px",
+                        "container-margin": "20px",
+                        "unit": "4px",
+                        "xs": "4px",
+                        "xl": "32px",
+                        "lg": "24px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "numeric-xl": ["Manrope"],
+                        "h1": ["Manrope"],
+                        "display": ["Manrope"],
+                        "h2": ["Manrope"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    "fontSize": {
+                        "numeric-xl": ["36px", {"lineHeight": "44px", "fontWeight": "700"}],
+                        "h1": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "display": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "h2": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .chart-container {
+            mask-image: linear-gradient(to right, black 85%, transparent 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen pb-24">
+<!-- TopAppBar -->
+<nav class="fixed top-0 left-0 w-full flex items-center justify-between px-5 h-16 bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-sm z-50">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-primary-container overflow-hidden">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="A professional headshot of a young woman with a confident expression, set against a soft-focus corporate office background. The lighting is bright and natural, emphasizing a high-clarity light-mode aesthetic. Her attire is business casual in neutral tones, fitting the modern financial app environment characterized by minimalist luxury and sophisticated calm." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmuhKQqDeNpIzXyzQ58IhRi-roDlkblOHDVthTyZj8vVLAuV97ib5xeslAas0SH1JRtpe6DFxutMSbVop3bJsvqFlG43xorNZexD7C4r75iHIw9ZDkw2lRfRkrFJ1sRoTIQBycG9PPsmB8LZcfln411kaIgL87wiEp_TJyQlOPBT3ndWEPjRhjOYGeSbHEwppBvpgJB2Rb0g9BtQ1d5qvTkYyAPExqC_hLw9iyvTllnu1PCBsj3vRk6O4KYlBzp3U4vEHxxA75qA8"/>
+</div>
+</div>
+<h1 class="text-lg font-extrabold tracking-tighter text-indigo-950 dark:text-white uppercase font-manrope antialiased tracking-tight">Restart</h1>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-indigo-900 dark:text-indigo-400" data-icon="notifications">notifications</span>
+</button>
+</nav>
+<main class="mt-16 px-container-margin py-lg space-y-lg max-w-2xl mx-auto">
+<!-- Evolution Header -->
+<header class="space-y-xs pt-md">
+<p class="font-label-caps text-label-caps text-on-surface-variant">ANÁLISE DE PROGRESSO</p>
+<h2 class="font-h1 text-h1 text-primary">Evolução RA Score</h2>
+</header>
+<!-- Chart Section: Monthly RA Score -->
+<section class="bg-surface-container-lowest rounded-xl p-md shadow-[0_4px_20px_rgba(26,27,75,0.04)] border border-outline-variant/30">
+<div class="flex justify-between items-end mb-lg">
+<div>
+<span class="font-numeric-xl text-numeric-xl text-primary">842</span>
+<span class="text-secondary font-bold text-sm ml-xs">+12 pts este mês</span>
+</div>
+<div class="text-right">
+<p class="font-label-caps text-label-caps text-on-surface-variant">SCORE ATUAL</p>
+</div>
+</div>
+<!-- Simple Line Chart Representation -->
+<div class="relative h-48 w-full mt-md overflow-hidden chart-container">
+<svg class="w-full h-full" viewbox="0 0 400 150">
+<!-- Grid Lines -->
+<line stroke="#f3f4f5" stroke-width="1" x1="0" x2="400" y1="30" y2="30"></line>
+<line stroke="#f3f4f5" stroke-width="1" x1="0" x2="400" y1="70" y2="70"></line>
+<line stroke="#f3f4f5" stroke-width="1" x1="0" x2="400" y1="110" y2="110"></line>
+<!-- Area Gradient -->
+<defs>
+<lineargradient id="chartGradient" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#6bfe9c;stop-opacity:0.2"></stop>
+<stop offset="100%" style="stop-color:#6bfe9c;stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path d="M0 120 Q 50 110, 100 95 T 200 80 T 300 45 T 400 30 L 400 150 L 0 150 Z" fill="url(#chartGradient)"></path>
+<!-- Main Line -->
+<path d="M0 120 Q 50 110, 100 95 T 200 80 T 300 45 T 400 30" fill="none" stroke="#006d37" stroke-linecap="round" stroke-width="3"></path>
+<!-- Active Node -->
+<circle cx="400" cy="30" fill="#006d37" r="5"></circle>
+<circle cx="400" cy="30" fill="#006d37" fill-opacity="0.2" r="10"></circle>
+</svg>
+<div class="absolute bottom-0 left-0 w-full flex justify-between px-2 font-label-caps text-[10px] text-outline pt-sm">
+<span>JAN</span>
+<span>FEV</span>
+<span>MAR</span>
+<span>ABR</span>
+<span>MAI</span>
+<span>JUN</span>
+</div>
+</div>
+</section>
+<!-- Message Box -->
+<div class="bg-primary-container rounded-xl p-md flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-secondary" data-icon="visibility" data-weight="fill" style="font-variation-settings: 'FILL' 1;">visibility</span>
+</div>
+<p class="text-white text-sm font-medium leading-relaxed">
+                Sua evolução fica visível para o banco parceiro, aumentando suas chances de novos limites.
+            </p>
+</div>
+<!-- Indicators Section -->
+<section class="space-y-md">
+<h3 class="font-label-caps text-label-caps text-on-surface-variant">INDICADORES DE CONFIANÇA</h3>
+<div class="grid grid-cols-1 gap-md">
+<!-- Indicator Card 1 -->
+<div class="bg-white rounded-xl p-md flex items-center justify-between border border-outline-variant/30 shadow-sm">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-lg bg-secondary-container/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div>
+<p class="font-bold text-primary">Pagamentos em dia</p>
+<p class="text-xs text-on-surface-variant">100% de pontualidade</p>
+</div>
+</div>
+<span class="text-secondary font-bold text-sm">META OK</span>
+</div>
+<!-- Indicator Card 2 -->
+<div class="bg-white rounded-xl p-md flex items-center justify-between border border-outline-variant/30 shadow-sm">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-lg bg-secondary-container/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" data-icon="verified_user" data-weight="fill" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<div>
+<p class="font-bold text-primary">Missões concluídas</p>
+<p class="text-xs text-on-surface-variant">12 de 15 completadas</p>
+</div>
+</div>
+<div class="flex items-center gap-xs">
+<div class="w-16 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[80%]"></div>
+</div>
+</div>
+</div>
+<!-- Indicator Card 3 -->
+<div class="bg-white rounded-xl p-md flex items-center justify-between border border-outline-variant/30 shadow-sm">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-on-tertiary-fixed" data-icon="calendar_month">calendar_month</span>
+</div>
+<div>
+<p class="font-bold text-primary">Meses ativos</p>
+<p class="text-xs text-on-surface-variant">Tempo de jornada</p>
+</div>
+</div>
+<p class="font-numeric-xl text-lg text-primary">06 Meses</p>
+</div>
+</div>
+</section>
+<!-- Motivating Visual Section (Asymmetric Bento Style) -->
+<section class="grid grid-cols-2 gap-md">
+<div class="col-span-2 relative h-40 rounded-2xl overflow-hidden group">
+<img alt="Success Story" class="w-full h-full object-cover" data-alt="A futuristic and vibrant digital visualization of a person climbing a series of glowing emerald green steps towards a bright horizon. The background features abstract financial data streams in deep indigo and dark violet tones. The lighting is dramatic and uplifting, with soft neon glows that evoke a sense of continuous upward growth and financial freedom in a modern, professional B2B2C context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPacjzaYrMH8G8paYgKZrKr7PWHJpyEA5BG8wP2X4zjagNrjMxB2WhoK7vZyPPk1RQlI4SWXpcrIMpZuggqmxSNl15AEizL9vzGn1W4CkriLtAKw-lrLeAdVbCndoHoj3UXIRVgpKXTxx3vbm1BySPHrARJW8BycLyggkLZ0yE-5l8rH8TNTwmDVzvtMCLNHo82lga8pO1L0LcNkPzPQlwuwpm3jNR4Uo3917PrrD5K9GRgPQgO97vNpGexWMxyTGVxi1RSz9NoSk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-md">
+<p class="text-white text-sm font-semibold">Você está no topo dos melhores pagadores de sua região.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-2 pb-safe bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800 shadow-[0_-4px_20px_rgba(26,27,75,0.04)] rounded-t-2xl">
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-indigo-700 dark:hover:text-indigo-300 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-manrope text-[10px] font-semibold uppercase tracking-widest">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-indigo-900 dark:text-green-400 bg-indigo-50 dark:bg-indigo-900/20 rounded-xl px-3 py-1 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="account_tree">account_tree</span>
+<span class="font-manrope text-[10px] font-semibold uppercase tracking-widest">Journey</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-indigo-700 dark:hover:text-indigo-300 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-manrope text-[10px] font-semibold uppercase tracking-widest">Payments</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-indigo-700 dark:hover:text-indigo-300 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-manrope text-[10px] font-semibold uppercase tracking-widest">Learn</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-indigo-700 dark:hover:text-indigo-300 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-manrope text-[10px] font-semibold uppercase tracking-widest">Profile</span>
+</div>
+</nav>
+</body></html>

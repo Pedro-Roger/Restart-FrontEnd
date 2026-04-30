@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Progress Evolution - Restart</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#edeeef",
+                        "tertiary-fixed": "#e8deff",
+                        "on-primary-fixed-variant": "#404273",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#2e3132",
+                        "on-secondary-container": "#00743a",
+                        "surface-container-high": "#e7e8e9",
+                        "on-primary-container": "#8384ba",
+                        "on-tertiary-container": "#8e80b8",
+                        "inverse-primary": "#c1c1fc",
+                        "surface-variant": "#e1e3e4",
+                        "on-surface-variant": "#46464f",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#6bfe9c",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#0c0030",
+                        "on-tertiary-fixed": "#1f1244",
+                        "tertiary-fixed-dim": "#cdbefa",
+                        "primary-fixed-dim": "#c1c1fc",
+                        "on-surface": "#191c1d",
+                        "surface-bright": "#f8f9fa",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#241849",
+                        "primary-fixed": "#e1e0ff",
+                        "on-secondary-fixed-variant": "#005228",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "primary-container": "#1a1b4b",
+                        "on-secondary-fixed": "#00210c",
+                        "outline": "#777680",
+                        "on-background": "#191c1d",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#141545",
+                        "surface": "#f8f9fa",
+                        "secondary": "#006d37",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#d9dadb",
+                        "secondary-fixed-dim": "#4ae183",
+                        "secondary-container": "#6bfe9c",
+                        "inverse-on-surface": "#f0f1f2",
+                        "surface-container-low": "#f3f4f5",
+                        "primary": "#020135",
+                        "background": "#f8f9fa",
+                        "outline-variant": "#c8c5d0",
+                        "on-tertiary-fixed-variant": "#4b3f72",
+                        "surface-tint": "#585a8d",
+                        "surface-container-highest": "#e1e3e4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "24px",
+                        "xs": "4px",
+                        "xl": "32px",
+                        "md": "16px",
+                        "unit": "4px",
+                        "sm": "8px",
+                        "container-margin": "20px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "h2": ["Manrope"],
+                        "label-caps": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "h1": ["Manrope"],
+                        "body-md": ["Inter"],
+                        "numeric-xl": ["Manrope"],
+                        "display": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "h2": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "h1": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "numeric-xl": ["36px", { "lineHeight": "44px", "fontWeight": "700" }],
+                        "display": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .shadow-ambient {
+            box-shadow: 0px 4px 20px rgba(26, 27, 75, 0.04);
+        }
+        .shadow-floating {
+            box-shadow: 0px 10px 30px rgba(26, 27, 75, 0.12);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-md antialiased pb-[100px] pt-16">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full flex items-center justify-between px-5 h-16 bg-slate-50 border-b border-slate-200 shadow-sm z-50 font-manrope antialiased tracking-tight">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center overflow-hidden border border-outline-variant">
+<img alt="User Profile Avatar with Level 5 Badge" class="w-full h-full object-cover" data-alt="A small, professional portrait photo of a user, acting as a profile avatar. The avatar is circular and features a subtle overlay indicating a 'Level 5' status badge, styled in a minimalist corporate aesthetic. The lighting is soft and flattering, suitable for a modern fintech app interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDT_3d5z9zlG8a2u51ceDBTAWGyAFxNalq82I6EQ2WpYRoWKhV4wGdvat7x8CzUJZHQL6UO9vVLLyKKofa8xTofRhIE7C6iSiJSFpAM8SEos__jZXRyHltvtN65UzdgKadKoCClZT57qmnNvL8S3gtEFX4kqM6JyvjrTM2m4tLjN7GVmi34nkbLwomwJHUcl15O544m4gfDMn5IoUfIEzokBhWcswx7J0ZE3N0nbS9-8g6aOgmMSAaDhPjnnVtbAexRVARBHf0Y_ME"/>
+</div>
+<span class="text-lg font-extrabold tracking-tighter text-indigo-950 uppercase">Restart</span>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-100 transition-colors active:scale-95 duration-200 text-indigo-900">
+<span class="material-symbols-outlined text-xl">notifications</span>
+</button>
+</header>
+<main class="max-w-[1200px] mx-auto px-container-margin py-lg flex flex-col gap-lg">
+<!-- Hero Section: Top 10% Achievement -->
+<section class="bg-primary rounded-xl p-lg flex flex-col items-center text-center shadow-floating relative overflow-hidden">
+<!-- Decorative Gold Accent -->
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-amber-400 rounded-full blur-3xl opacity-20"></div>
+<div class="absolute -bottom-10 -left-10 w-32 h-32 bg-amber-400 rounded-full blur-3xl opacity-20"></div>
+<span class="material-symbols-outlined text-amber-400 text-6xl mb-md" style="font-variation-settings: 'FILL' 1;">emoji_events</span>
+<h1 class="font-h1 text-h1 text-on-primary mb-sm relative z-10">You're at the top 10% of savers in your region!</h1>
+<p class="font-body-lg text-body-lg text-primary-fixed-dim relative z-10">Your consistent dedication is paying off. Keep up the momentum.</p>
+</section>
+<!-- Bento Grid Layout for Progress Evolution -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<!-- Growth Chart Component (Takes up 2 columns on desktop) -->
+<section class="bg-surface-container-lowest rounded-xl p-lg shadow-ambient md:col-span-2 flex flex-col">
+<div class="flex justify-between items-center mb-md">
+<h2 class="font-h2 text-h2 text-primary">Progress Evolution</h2>
+<span class="font-label-caps text-label-caps text-secondary-container bg-secondary px-3 py-1 rounded-full uppercase tracking-widest">Growth</span>
+</div>
+<!-- Abstract Representation of a Chart with Milestone Flags -->
+<div class="flex-grow flex items-end justify-between relative h-[200px] mt-lg px-sm">
+<!-- Grid Lines -->
+<div class="absolute inset-0 flex flex-col justify-between z-0 pointer-events-none opacity-10">
+<div class="w-full border-b border-on-surface"></div>
+<div class="w-full border-b border-on-surface"></div>
+<div class="w-full border-b border-on-surface"></div>
+<div class="w-full border-b border-on-surface"></div>
+</div>
+<!-- Bars & Flags -->
+<div class="flex flex-col items-center gap-2 relative z-10 group">
+<div class="w-8 md:w-12 h-16 bg-surface-variant rounded-t-lg transition-all"></div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Jan</span>
+</div>
+<div class="flex flex-col items-center gap-2 relative z-10 group">
+<div class="w-8 md:w-12 h-24 bg-surface-variant rounded-t-lg transition-all"></div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Feb</span>
+</div>
+<div class="flex flex-col items-center gap-2 relative z-10 group">
+<!-- Milestone Flag -->
+<div class="absolute -top-12 flex flex-col items-center">
+<span class="font-label-caps text-label-caps bg-amber-100 text-amber-800 px-2 py-0.5 rounded text-[10px]">Milestone</span>
+<div class="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[6px] border-t-amber-100"></div>
+</div>
+<div class="w-8 md:w-12 h-32 bg-primary-fixed rounded-t-lg transition-all relative">
+<!-- Line connecting flag to bar -->
+<div class="absolute -top-6 left-1/2 w-px h-6 bg-amber-200"></div>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Mar</span>
+</div>
+<div class="flex flex-col items-center gap-2 relative z-10 group">
+<div class="w-8 md:w-12 h-40 bg-surface-variant rounded-t-lg transition-all"></div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Apr</span>
+</div>
+<div class="flex flex-col items-center gap-2 relative z-10 group">
+<!-- Active Milestone Flag -->
+<div class="absolute -top-12 flex flex-col items-center">
+<span class="font-label-caps text-label-caps bg-secondary text-on-secondary px-2 py-0.5 rounded text-[10px]">Current</span>
+<div class="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[6px] border-t-secondary"></div>
+</div>
+<div class="w-8 md:w-12 h-48 bg-secondary rounded-t-lg shadow-[0_0_15px_rgba(107,254,156,0.3)] transition-all relative">
+<div class="absolute -top-6 left-1/2 w-px h-6 bg-secondary-fixed"></div>
+</div>
+<span class="font-label-caps text-label-caps text-secondary font-bold">May</span>
+</div>
+</div>
+</section>
+<!-- Key Indicators Column -->
+<div class="flex flex-col gap-md">
+<!-- Payment Streak -->
+<div class="bg-surface-container-lowest rounded-xl p-md shadow-ambient flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-amber-50 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-amber-500" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-1">Payment Streak</p>
+<p class="font-h2 text-h2 text-primary">5 Months</p>
+</div>
+</div>
+<!-- Missions Completed -->
+<div class="bg-surface-container-lowest rounded-xl p-md shadow-ambient flex flex-col justify-center">
+<div class="flex justify-between items-center mb-2">
+<p class="font-label-caps text-label-caps text-on-surface-variant">Missions Completed</p>
+<span class="font-label-caps text-label-caps text-primary font-bold">12/15</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-2 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full w-4/5"></div>
+</div>
+</div>
+<!-- Active Months -->
+<div class="bg-surface-container-lowest rounded-xl p-md shadow-ambient flex items-center gap-md flex-grow">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-1">Active Months</p>
+<p class="font-h2 text-h2 text-primary">8 Total</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-2 pb-safe bg-white rounded-t-2xl shadow-[0_-4px_20px_rgba(26,27,75,0.04)] font-manrope text-[10px] font-semibold uppercase tracking-widest text-indigo-900 border-t border-slate-100 md:hidden">
+<a class="flex flex-col items-center justify-center text-slate-400 hover:text-indigo-700 active:scale-90 transition-transform w-16" href="#">
+<span class="material-symbols-outlined mb-1 text-2xl">home</span>
+<span>Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-indigo-900 bg-indigo-50 rounded-xl px-3 py-1 active:scale-90 transition-transform w-16" href="#">
+<span class="material-symbols-outlined mb-1 text-2xl" style="font-variation-settings: 'FILL' 1;">account_tree</span>
+<span>Journey</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 hover:text-indigo-700 active:scale-90 transition-transform w-16" href="#">
+<span class="material-symbols-outlined mb-1 text-2xl">payments</span>
+<span>Payments</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 hover:text-indigo-700 active:scale-90 transition-transform w-16" href="#">
+<span class="material-symbols-outlined mb-1 text-2xl">menu_book</span>
+<span>Learn</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 hover:text-indigo-700 active:scale-90 transition-transform w-16" href="#">
+<span class="material-symbols-outlined mb-1 text-2xl">person</span>
+<span>Profile</span>
+</a>
+</nav>
+</body></html>

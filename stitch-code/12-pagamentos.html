@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#005228",
+                    "secondary": "#006d37",
+                    "on-primary-fixed-variant": "#404273",
+                    "inverse-surface": "#2e3132",
+                    "surface": "#f8f9fa",
+                    "background": "#f8f9fa",
+                    "primary-fixed-dim": "#c1c1fc",
+                    "surface-bright": "#f8f9fa",
+                    "on-primary-fixed": "#141545",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#8e80b8",
+                    "on-tertiary": "#ffffff",
+                    "surface-variant": "#e1e3e4",
+                    "surface-container": "#edeeef",
+                    "on-secondary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed": "#1f1244",
+                    "on-tertiary-fixed-variant": "#4b3f72",
+                    "tertiary-fixed": "#e8deff",
+                    "secondary-container": "#6bfe9c",
+                    "surface-tint": "#585a8d",
+                    "primary-container": "#1a1b4b",
+                    "tertiary-fixed-dim": "#cdbefa",
+                    "tertiary-container": "#241849",
+                    "surface-container-highest": "#e1e3e4",
+                    "inverse-on-surface": "#f0f1f2",
+                    "surface-dim": "#d9dadb",
+                    "on-secondary-fixed": "#00210c",
+                    "surface-container-high": "#e7e8e9",
+                    "on-surface": "#191c1d",
+                    "on-background": "#191c1d",
+                    "on-primary-container": "#8384ba",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "inverse-primary": "#c1c1fc",
+                    "outline": "#777680",
+                    "tertiary": "#0c0030",
+                    "primary-fixed": "#e1e0ff",
+                    "on-surface-variant": "#46464f",
+                    "outline-variant": "#c8c5d0",
+                    "on-secondary-container": "#00743a",
+                    "secondary-fixed": "#6bfe9c",
+                    "surface-container-low": "#f3f4f5",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#4ae183",
+                    "primary": "#020135"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "8px",
+                    "md": "16px",
+                    "container-margin": "20px",
+                    "unit": "4px",
+                    "xs": "4px",
+                    "xl": "32px",
+                    "lg": "24px",
+                    "gutter": "16px"
+            },
+            "fontFamily": {
+                    "numeric-xl": ["Manrope"],
+                    "h1": ["Manrope"],
+                    "display": ["Manrope"],
+                    "h2": ["Manrope"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "label-caps": ["Inter"]
+            },
+            "fontSize": {
+                    "numeric-xl": ["36px", {"lineHeight": "44px", "fontWeight": "700"}],
+                    "h1": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "display": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "h2": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .custom-shadow-soft {
+            shadow: 0 4px 20px rgba(26, 27, 75, 0.04);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full flex items-center justify-between px-5 h-16 bg-slate-50 border-b border-slate-200 shadow-sm z-50">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-highest">
+<img alt="User Profile Avatar" class="w-full h-full object-cover" data-alt="A professional close-up portrait of a serene individual in a bright, modern studio setting. The lighting is soft and high-key, reflecting a clean light-mode aesthetic. The individual has a calm, confident expression, emphasizing a sense of financial control and personal growth. The background is a minimalist, slightly out-of-focus interior with neutral tones of white and light grey." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo_EVci5A6V-KPWeeHRihTCLDxiLFDo4qNVNXRUuAUt3ksQ9u6I_FMbrA4FMUGpGXr4BSm878jGPnCIpGgB7S7UhhELHJCk3R-TraowHh-iRbBlT0VUK_MwhQInu9uqi1KQVMC78euPuzhLMaWgaR6l_Yha2tCYPtHBw0ioeS-q2nxRfH6nOe7Yaeh9BHPkiRI1zycXhmJuzvmw4T68fv3r6awhlTNeX-_q5u0ncOOV5rm0PcODjXjre8Knytf2nva1NeaWeuGDHY"/>
+</div>
+<span class="text-lg font-extrabold tracking-tighter text-indigo-950 uppercase font-manrope">Restart</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-slate-100 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-indigo-900" data-icon="notifications">notifications</span>
+</button>
+</div>
+</header>
+<main class="pt-24 px-container-margin max-w-2xl mx-auto space-y-lg">
+<!-- Welcome & Motivation -->
+<section class="space-y-sm">
+<h1 class="font-h1 text-h1 text-primary">Pagamentos</h1>
+<div class="bg-secondary-container/20 p-md rounded-xl flex items-center gap-md border border-secondary-container/30">
+<div class="bg-secondary-container p-sm rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<p class="font-body-md text-on-secondary-container font-semibold">
+                    Pagamentos em dia ajudam sua evolução
+                </p>
+</div>
+</section>
+<!-- Current Invoice Card -->
+<section class="bg-white rounded-xl p-md shadow-[0_4px_20px_rgba(26,27,75,0.04)] border border-surface-container">
+<div class="flex justify-between items-start mb-md">
+<div>
+<p class="font-label-caps text-label-caps text-outline uppercase mb-xs">Plano Ativo</p>
+<h2 class="font-h2 text-h2 text-primary">Mensalidade Restart</h2>
+</div>
+<span class="px-3 py-1 bg-error-container text-on-error-container rounded-full text-xs font-bold uppercase tracking-wider">
+                    Pendente
+                </span>
+</div>
+<div class="flex items-baseline gap-xs mb-lg">
+<span class="text-primary font-numeric-xl text-numeric-xl">R$ 149</span>
+<span class="text-outline font-body-md">/mês</span>
+</div>
+<div class="space-y-md">
+<div class="grid grid-cols-3 gap-sm">
+<button class="flex flex-col items-center justify-center p-md rounded-xl border-1.5 border-surface-container hover:border-primary-container transition-all active:scale-95 group bg-surface-container-low">
+<span class="material-symbols-outlined text-primary mb-2 group-hover:scale-110 transition-transform" data-icon="qr_code_2">qr_code_2</span>
+<span class="font-label-caps text-[10px] text-primary">Pix</span>
+</button>
+<button class="flex flex-col items-center justify-center p-md rounded-xl border-1.5 border-surface-container hover:border-primary-container transition-all active:scale-95 group bg-surface-container-low">
+<span class="material-symbols-outlined text-primary mb-2 group-hover:scale-110 transition-transform" data-icon="barcode">barcode</span>
+<span class="font-label-caps text-[10px] text-primary">Boleto</span>
+</button>
+<button class="flex flex-col items-center justify-center p-md rounded-xl border-1.5 border-surface-container hover:border-primary-container transition-all active:scale-95 group bg-surface-container-low">
+<span class="material-symbols-outlined text-primary mb-2 group-hover:scale-110 transition-transform" data-icon="credit_card">credit_card</span>
+<span class="font-label-caps text-[10px] text-primary">Débito</span>
+</button>
+</div>
+<button class="w-full bg-primary text-white h-14 rounded-xl font-bold text-body-lg shadow-[0_10px_30px_rgba(26,27,75,0.12)] active:scale-[0.98] transition-transform flex items-center justify-center gap-sm">
+                    Pagar agora
+                    <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- Payment History -->
+<section class="space-y-md">
+<div class="flex justify-between items-center px-xs">
+<h3 class="font-h2 text-body-lg font-bold text-primary">Histórico de pagamentos</h3>
+<button class="text-on-primary-container font-label-caps uppercase text-xs hover:underline underline-offset-4">Ver todos</button>
+</div>
+<div class="space-y-sm">
+<!-- History Item 1 -->
+<div class="flex items-center justify-between p-md bg-white rounded-xl border border-surface-container">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-full bg-secondary-container/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle">check_circle</span>
+</div>
+<div>
+<p class="font-bold text-primary">Mensalidade - Outubro</p>
+<p class="text-xs text-outline font-body-md">10 Out, 2023 • Pix</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-primary">R$ 149,00</p>
+<p class="text-[10px] font-label-caps text-secondary uppercase">Pago</p>
+</div>
+</div>
+<!-- History Item 2 -->
+<div class="flex items-center justify-between p-md bg-white rounded-xl border border-surface-container">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-full bg-secondary-container/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle">check_circle</span>
+</div>
+<div>
+<p class="font-bold text-primary">Mensalidade - Setembro</p>
+<p class="text-xs text-outline font-body-md">10 Set, 2023 • Cartão</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-primary">R$ 149,00</p>
+<p class="text-[10px] font-label-caps text-secondary uppercase">Pago</p>
+</div>
+</div>
+<!-- History Item 3 -->
+<div class="flex items-center justify-between p-md bg-white rounded-xl border border-surface-container">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-full bg-secondary-container/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle">check_circle</span>
+</div>
+<div>
+<p class="font-bold text-primary">Mensalidade - Agosto</p>
+<p class="text-xs text-outline font-body-md">10 Ago, 2023 • Pix</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-primary">R$ 149,00</p>
+<p class="text-[10px] font-label-caps text-secondary uppercase">Pago</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Upsell/Info Card -->
+<section class="relative overflow-hidden rounded-2xl bg-primary-container p-lg text-white aspect-[16/9] flex flex-col justify-end">
+<img alt="Financial security illustration" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-30" data-alt="A sophisticated abstract visual of floating digital glass panes and metallic currency symbols, glowing with deep navy and indigo light. The composition is modern and minimalist, representing the transparency and security of a premium financial journey. Lighting is cinematic and focused, evoking a sense of calm control and professional excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRpabi8mpxo57uPpWtEPqe1wk0_qVc-d84RSV5ZIlAFSR5AwyMNqByBhgxddRmmLV0RQVk3edXyDioFdfIMSORhyzu1JBeswfhKOXrL6wIRYJxggHW8kHyj0_5O568dKG0RlsqAeIMsqQBprFqhVfAmwtXhYB8uDY32t5uHnSudAM3WocrRYJl2W1uzU8nKsDdnbirMCMqPZV6wQdQsEZssdmwAcW2hlE27KMqQPFGu_fxhN6WlAJ51yK5oainTbsZf2atzxOsrGc"/>
+<div class="relative z-10">
+<h4 class="font-h2 text-h2 mb-xs">Benefícios Premium</h4>
+<p class="text-body-md opacity-80 mb-md">Mantenha sua assinatura para continuar acessando consultoria personalizada.</p>
+<button class="bg-white text-primary px-lg py-sm rounded-full font-bold text-xs uppercase tracking-widest active:scale-95 transition-transform">
+                    Saiba mais
+                </button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-2 pb-safe bg-white rounded-t-2xl border-t border-slate-100 shadow-[0_-4px_20px_rgba(26,27,75,0.04)]">
+<button class="flex flex-col items-center justify-center text-slate-400 hover:text-indigo-700 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-manrope text-[10px] font-semibold uppercase tracking-widest mt-1">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 hover:text-indigo-700 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="account_tree">account_tree</span>
+<span class="font-manrope text-[10px] font-semibold uppercase tracking-widest mt-1">Journey</span>
+</button>
+<button class="flex flex-col items-center justify-center text-indigo-900 bg-indigo-50 rounded-xl px-3 py-1 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-manrope text-[10px] font-semibold uppercase tracking-widest mt-1">Payments</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 hover:text-indigo-700 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-manrope text-[10px] font-semibold uppercase tracking-widest mt-1">Learn</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 hover:text-indigo-700 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-manrope text-[10px] font-semibold uppercase tracking-widest mt-1">Profile</span>
+</button>
+</nav>
+</body></html>
