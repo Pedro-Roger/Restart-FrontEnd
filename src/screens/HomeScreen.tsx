@@ -61,7 +61,7 @@ export function HomeScreen({
   const selectedBank = openFinanceBanks.find((bank) => bank.id === selectedBankId) ?? openFinanceBanks[0];
 
   return (
-    <View>
+    <View style={styles.homeScreen}>
       <Header title={`Olá, ${user.name}`} subtitle={`Dados sincronizados do ${selectedBank.name}`} />
       <ScrollView
         horizontal
@@ -83,12 +83,17 @@ export function HomeScreen({
               style={[
                 styles.bankChip,
                 {
-                  backgroundColor: active ? theme.card : theme.greenSoft,
-                  borderColor: active ? theme.gold : "transparent"
+                  backgroundColor: active ? theme.glassStrong : theme.glass,
+                  borderColor: active ? theme.glassAccentBorder : theme.glassBorder
                 }
               ]}
             >
-              <View style={[styles.bankChipBadge, { backgroundColor: active ? theme.gold : theme.navySoft }]}>
+              <View
+                style={[
+                  styles.bankChipBadge,
+                  { backgroundColor: active ? theme.navySoft : "rgba(255,255,255,0.10)" }
+                ]}
+              >
                 <Text style={styles.bankChipBadgeText}>{bank.shortName}</Text>
               </View>
               <Text style={[styles.bankChipText, { color: theme.text }]}>{bank.id === "add" ? "+" : bank.name}</Text>

@@ -46,7 +46,7 @@ export const styles = StyleSheet.create({
   loginHeader: { alignItems: "center" },
   loginLogo: { width: 220, height: 72 },
   loginContent: { flex: 1, justifyContent: "space-between", paddingTop: 20 },
-  loginCopy: { marginTop: "auto", gap: 14 },
+  loginCopy: { marginTop: "auto", gap: 14, paddingLeft: 25 },
   loginEyebrow: {
     color: "#FFFFFF",
     fontSize: 13,
@@ -309,7 +309,7 @@ export const styles = StyleSheet.create({
     borderRadius: 14,
     paddingHorizontal: 16,
     color: colors.text,
-    backgroundColor: "#FFFFFF",
+    backgroundColor: "#101B31",
     borderWidth: 1,
     borderColor: colors.line,
     fontSize: 16,
@@ -330,12 +330,12 @@ export const styles = StyleSheet.create({
     borderRadius: 16,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#FFFFFF",
+    backgroundColor: "#14233D",
     borderWidth: 1,
     borderColor: colors.line,
     marginTop: 12
   },
-  secondaryButtonText: { color: colors.navy, fontSize: 16, fontFamily: fontFamily.heading },
+  secondaryButtonText: { color: colors.text, fontSize: 16, fontFamily: fontFamily.heading },
   dangerButton: { borderColor: "#F0CDCD" },
   dangerText: { color: colors.danger },
   centerButton: { alignItems: "center", paddingVertical: 16 },
@@ -376,19 +376,86 @@ export const styles = StyleSheet.create({
   securityText: { color: colors.green, fontFamily: fontFamily.heading },
   privacyText: { color: colors.muted, fontSize: 14, lineHeight: 21, marginBottom: 12, fontFamily: fontFamily.body },
   appShell: { flex: 1, backgroundColor: colors.bg },
-  appContent: { padding: 18, paddingBottom: 108 },
+  appContent: { paddingTop: 18, paddingBottom: 132 },
+  screenBackdrop: {
+    flex: 1,
+    backgroundColor: colors.bg,
+    overflow: "hidden"
+  },
+  screenGlowPrimary: {
+    position: "absolute",
+    width: 340,
+    height: 340,
+    borderRadius: 170,
+    backgroundColor: "rgba(58, 130, 255, 0.20)",
+    top: -88,
+    right: -118
+  },
+  screenGlowSecondary: {
+    position: "absolute",
+    width: 280,
+    height: 280,
+    borderRadius: 140,
+    backgroundColor: "rgba(111, 167, 255, 0.14)",
+    top: 260,
+    left: -132
+  },
+  screenGlowTertiary: {
+    position: "absolute",
+    width: 320,
+    height: 320,
+    borderRadius: 160,
+    backgroundColor: "rgba(79, 113, 255, 0.12)",
+    bottom: -110,
+    right: -120
+  },
+  homeScreen: {
+    position: "relative",
+    gap: 0
+  },
   header: { marginTop: 10, marginBottom: 18 },
   headerTop: { flexDirection: "row", alignItems: "flex-start", justifyContent: "space-between", gap: 14 },
   headerCopy: { flex: 1 },
   headerTitle: { color: colors.text, fontSize: 28, fontFamily: fontFamily.heading },
   headerSubtitle: { color: colors.muted, fontSize: 15, marginTop: 5, fontFamily: fontFamily.body },
   card: {
-    borderRadius: 22,
+    borderRadius: 24,
     padding: 18,
-    backgroundColor: colors.card,
+    backgroundColor: "transparent",
     borderWidth: 1,
-    borderColor: colors.line,
-    marginBottom: 14
+    borderColor: "rgba(255,255,255,0.10)",
+    marginBottom: 14,
+    shadowColor: "#000000",
+    shadowOpacity: 0.32,
+    shadowRadius: 24,
+    shadowOffset: { width: 0, height: 14 },
+    elevation: 12,
+    overflow: "hidden"
+  },
+  cardHighlight: {
+    position: "absolute",
+    top: 0,
+    left: 16,
+    right: 16,
+    height: 1,
+    backgroundColor: "rgba(255,255,255,0.22)"
+  },
+  cardGlow: {
+    position: "absolute",
+    width: 180,
+    height: 180,
+    borderRadius: 90,
+    backgroundColor: "rgba(91, 141, 255, 0.14)",
+    top: -84,
+    right: -72
+  },
+  cardTint: {
+    position: "absolute",
+    inset: 0
+  },
+  cardContent: {
+    position: "relative",
+    zIndex: 1
   },
   bankSwitcherScroll: { marginBottom: 14 },
   bankSwitcherRow: { gap: 10, paddingRight: 10 },
@@ -400,14 +467,21 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     flexDirection: "row",
     alignItems: "center",
-    gap: 10
+    gap: 10,
+    shadowColor: "#000000",
+    shadowOpacity: 0.16,
+    shadowRadius: 16,
+    shadowOffset: { width: 0, height: 8 },
+    elevation: 6
   },
   bankChipBadge: {
     width: 34,
     height: 34,
     borderRadius: 999,
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.16)"
   },
   bankChipBadgeText: { color: "#FFFFFF", fontSize: 12, fontFamily: fontFamily.heading },
   bankChipText: { fontSize: 15, fontFamily: fontFamily.heading },
@@ -415,7 +489,14 @@ export const styles = StyleSheet.create({
     borderRadius: 28,
     padding: 18,
     marginBottom: 14,
-    overflow: "hidden"
+    overflow: "hidden",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.18)",
+    shadowColor: "#000000",
+    shadowOpacity: 0.3,
+    shadowRadius: 24,
+    shadowOffset: { width: 0, height: 16 },
+    elevation: 12
   },
   heroWave: {
     position: "absolute",
@@ -439,7 +520,9 @@ export const styles = StyleSheet.create({
   accountMetricPill: {
     flex: 1,
     borderRadius: 18,
-    backgroundColor: "rgba(255,255,255,0.68)",
+    backgroundColor: "rgba(255,255,255,0.18)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.18)",
     paddingHorizontal: 14,
     paddingVertical: 12
   },
@@ -450,9 +533,11 @@ export const styles = StyleSheet.create({
     borderRadius: 27,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#FFFFFF"
+    backgroundColor: "rgba(255,255,255,0.18)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.18)"
   },
-  accountPrimaryActionText: { color: colors.navy, fontSize: 16, fontFamily: fontFamily.heading },
+  accountPrimaryActionText: { color: "#F8FBFF", fontSize: 16, fontFamily: fontFamily.heading },
   relationshipScoreHeader: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginBottom: 12 },
   relationshipScoreValue: { color: colors.navy, fontSize: 34, fontFamily: fontFamily.heading },
   relationshipScoreText: { color: colors.muted, fontSize: 14, lineHeight: 20, fontFamily: fontFamily.body, marginTop: 12 },
@@ -492,7 +577,9 @@ export const styles = StyleSheet.create({
     borderRadius: 12,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: colors.greenSoft
+    backgroundColor: "rgba(101, 145, 255, 0.14)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.08)"
   },
   rowText: { flex: 1 },
   rowTitle: { color: colors.text, fontSize: 15, fontFamily: fontFamily.heading },
@@ -501,11 +588,33 @@ export const styles = StyleSheet.create({
   miniCard: {
     flex: 1,
     minHeight: 116,
-    borderRadius: 20,
+    borderRadius: 22,
     padding: 15,
-    backgroundColor: "#FFFFFF",
+    backgroundColor: "rgba(17, 29, 51, 0.68)",
     borderWidth: 1,
-    borderColor: colors.line
+    borderColor: "rgba(255,255,255,0.10)",
+    overflow: "hidden",
+    shadowColor: "#000000",
+    shadowOpacity: 0.22,
+    shadowRadius: 18,
+    shadowOffset: { width: 0, height: 12 },
+    elevation: 8
+  },
+  miniCardTint: {
+    position: "absolute",
+    inset: 0
+  },
+  miniCardHighlight: {
+    position: "absolute",
+    top: 0,
+    left: 14,
+    right: 14,
+    height: 1,
+    backgroundColor: "rgba(255,255,255,0.20)"
+  },
+  miniCardContent: {
+    position: "relative",
+    zIndex: 1
   },
   miniTitle: { color: colors.muted, fontSize: 12, fontFamily: fontFamily.heading, marginTop: 10 },
   miniValue: { color: colors.text, fontSize: 18, fontFamily: fontFamily.heading, marginTop: 4 },
@@ -532,10 +641,10 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 8,
     borderRadius: 999,
-    backgroundColor: "#DCFCE7"
+    backgroundColor: "#193851"
   },
   paymentSuccessBadgeText: {
-    color: "#166534",
+    color: "#9CD0FF",
     fontSize: 13,
     textTransform: "uppercase",
     fontFamily: fontFamily.heading
@@ -547,7 +656,7 @@ export const styles = StyleSheet.create({
     borderRadius: 16,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#22C55E"
+    backgroundColor: "#2E7BFF"
   },
   paymentSuccessText: { color: colors.text, fontSize: 14, lineHeight: 20, fontFamily: fontFamily.heading },
   bigValue: { color: colors.navy, fontSize: 32, fontFamily: fontFamily.heading, marginTop: 4 },
@@ -589,6 +698,17 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     marginBottom: 48
   },
+  openFinanceBackLower: {
+    marginTop: 16,
+    alignSelf: "flex-start",
+    minHeight: 44,
+    paddingHorizontal: 12,
+    borderRadius: 999,
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 6,
+    backgroundColor: "rgba(255,255,255,0.82)"
+  },
   openFinanceTitle: {
     fontSize: 28,
     lineHeight: 34,
@@ -609,8 +729,8 @@ export const styles = StyleSheet.create({
   openFinanceBenefitCard: {
     width: 292,
     minHeight: 290,
-    borderRadius: 26,
-    backgroundColor: "#113A4A",
+    borderRadius: 18,
+    backgroundColor: "#162744",
     borderWidth: 1,
     borderColor: "#1D7087",
     padding: 22,
@@ -759,15 +879,20 @@ export const styles = StyleSheet.create({
     position: "absolute",
     left: 12,
     right: 12,
-    bottom: 12,
+    bottom: 14,
     height: 72,
-    borderRadius: 24,
+    borderRadius: 18,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-around",
-    backgroundColor: "#FFFFFF",
+    backgroundColor: "#111B31",
     borderWidth: 1,
-    borderColor: colors.line
+    borderColor: "#2A3A5B",
+    shadowColor: "#000000",
+    shadowOpacity: 0.35,
+    shadowRadius: 14,
+    shadowOffset: { width: 0, height: 8 },
+    elevation: 10
   },
   tabButton: { flex: 1, alignItems: "center", justifyContent: "center", gap: 4, minHeight: 62 },
   tabLabel: { color: colors.muted, fontSize: 11, fontFamily: fontFamily.heading },
@@ -781,7 +906,12 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    gap: 0
+    gap: 0,
+    shadowColor: "#000000",
+    shadowOpacity: 0.18,
+    shadowRadius: 14,
+    shadowOffset: { width: 0, height: 8 },
+    elevation: 6
   },
   previewStack: {
     height: 220,

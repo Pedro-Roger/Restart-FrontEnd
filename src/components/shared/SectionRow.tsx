@@ -15,7 +15,15 @@ export function SectionRow({ icon, title, subtitle, styles }: Props) {
   const { theme } = useContext(ThemeContext);
   return (
     <View style={styles.sectionRow}>
-      <View style={[styles.rowIcon, { backgroundColor: theme.greenSoft }]}>
+      <View
+        style={[
+          styles.rowIcon,
+          {
+            backgroundColor: theme.glassSoft,
+            borderColor: theme.glassBorder
+          }
+        ]}
+      >
         <Feather name={icon} size={18} color={theme.green} />
       </View>
       <View style={styles.rowText}>

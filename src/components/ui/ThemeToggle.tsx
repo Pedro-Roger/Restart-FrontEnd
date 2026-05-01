@@ -10,7 +10,7 @@ export function ThemeToggle({ styles }: { styles: Record<string, any> }) {
       accessibilityRole="switch"
       accessibilityState={{ checked: themeMode === "dark" }}
       onPress={toggleTheme}
-      style={[styles.themeToggle, { backgroundColor: theme.card, borderColor: theme.line }]}
+      style={[styles.themeToggle, { backgroundColor: theme.glass, borderColor: theme.glassBorder }]}
     >
       <Feather name={themeMode === "dark" ? "moon" : "sun"} size={17} color={theme.green} />
     </Pressable>

@@ -18,12 +18,12 @@ export function Card({ children, accent, styles, AnimatedCard }: Props) {
         style={[
           styles.card,
           {
-            backgroundColor: accent ? theme.elevated : theme.card,
-            borderColor: accent ? theme.greenSoft : theme.line
+            backgroundColor: "transparent",
+            borderColor: accent ? theme.glassAccentBorder : theme.glassBorder
           }
         ]}
       >
-        {children}
+        <View style={styles.cardContent}>{children}</View>
       </View>
     </AnimatedCard>
   );

@@ -17,13 +17,14 @@ export function OpenFinanceManagementScreen({
   return (
     <View>
       <View style={[styles.openFinanceHero, { backgroundColor: theme.card }]}>
-        <Pressable onPress={onBack} style={styles.openFinanceBack}>
-          <Feather name="chevron-left" size={24} color={theme.text} />
-        </Pressable>
         <Text style={[styles.openFinanceTitle, { color: theme.text }]}>{openFinanceManagement.title}</Text>
         <Pressable style={styles.openFinanceConnectButton}>
           <Feather name="plus" size={24} color="#FFFFFF" />
           <Text style={styles.openFinanceConnectText}>{openFinanceManagement.connectLabel}</Text>
+        </Pressable>
+        <Pressable onPress={onBack} style={styles.openFinanceBackLower}>
+          <Feather name="chevron-left" size={22} color={theme.text} />
+          <Text style={[styles.rowTitle, { color: theme.text }]}>Voltar</Text>
         </Pressable>
       </View>
       <Card accent>
