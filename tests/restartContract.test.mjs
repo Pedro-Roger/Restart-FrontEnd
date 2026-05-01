@@ -2,8 +2,24 @@ import { readFileSync } from "node:fs";
 import test from "node:test";
 import assert from "node:assert/strict";
 
-const appSource = readFileSync(new URL("../App.tsx", import.meta.url), "utf8");
+const rootLayoutSource = readFileSync(new URL("../src/app/_layout.tsx", import.meta.url), "utf8");
+const indexRouteSource = readFileSync(new URL("../src/app/index.tsx", import.meta.url), "utf8");
+const tabsLayoutSource = readFileSync(new URL("../src/app/(tabs)/_layout.tsx", import.meta.url), "utf8");
+const homeRouteSource = readFileSync(new URL("../src/app/(tabs)/home.tsx", import.meta.url), "utf8");
+const authSigninRouteSource = readFileSync(new URL("../src/app/signin.tsx", import.meta.url), "utf8");
+const authRecoveryRouteSource = readFileSync(new URL("../src/app/recovery.tsx", import.meta.url), "utf8");
+const routeDependenciesSource = readFileSync(new URL("../src/app/useRouteDependencies.tsx", import.meta.url), "utf8");
+const appDependenciesSource = readFileSync(new URL("../src/app/createAppDependencies.tsx", import.meta.url), "utf8");
+const appRootSource = readFileSync(new URL("../src/app/AppRoot.tsx", import.meta.url), "utf8");
+const appPresentationSource = readFileSync(new URL("../src/app/appPresentation.tsx", import.meta.url), "utf8");
+const appIntroScreensSource = readFileSync(new URL("../src/app/appIntroScreens.tsx", import.meta.url), "utf8");
+const appStylesSource = readFileSync(new URL("../src/app/appStyles.ts", import.meta.url), "utf8");
+const bottomNavigationSource = readFileSync(new URL("../src/components/navigation/BottomNavigation.tsx", import.meta.url), "utf8");
+const screenTransitionSource = readFileSync(new URL("../src/components/layout/ScreenTransition.tsx", import.meta.url), "utf8");
+const homeScreenSource = readFileSync(new URL("../src/screens/HomeScreen.tsx", import.meta.url), "utf8");
+const openFinanceManagementSource = readFileSync(new URL("../src/screens/OpenFinanceManagementScreen.tsx", import.meta.url), "utf8");
 const contentSource = readFileSync(new URL("../src/restartContent.ts", import.meta.url), "utf8");
+const themeSource = readFileSync(new URL("../src/theme/theme.ts", import.meta.url), "utf8");
 
 test("defines the requested Restart mobile screens and bottom navigation", () => {
   const requiredScreens = [
@@ -80,33 +96,61 @@ test("contains product copy, missions, payment options and education cards", () 
   }
 });
 
-test("implements native Expo UI components instead of Stitch screenshot viewer", () => {
+test("implements native Expo Router navigation and native UI components", () => {
+  const nativeImplementationSource = [
+    rootLayoutSource,
+    indexRouteSource,
+    tabsLayoutSource,
+    homeRouteSource,
+    authSigninRouteSource,
+    authRecoveryRouteSource,
+    routeDependenciesSource,
+    appDependenciesSource,
+    appPresentationSource,
+    bottomNavigationSource,
+    openFinanceManagementSource
+  ].join("\n");
+
   const requiredImplementation = [
+    "Stack",
+    "Tabs",
+    "useRouter",
+    "Redirect",
     "CircularProgress",
     "ProgressBar",
     "MissionTimeline",
     "SimpleChart",
     "BottomNavigation",
-    "renderActiveScreen",
-    "Restart",
     "RecoveryScreen",
     "\"signin\"",
     "\"recovery\""
   ];
 
   for (const token of requiredImplementation) {
-    assert.match(appSource, new RegExp(token));
+    assert.match(nativeImplementationSource, new RegExp(token));
   }
 
-  assert.doesNotMatch(appSource, /stitchScreens/);
+  assert.doesNotMatch(nativeImplementationSource, /stitchScreens/);
 });
 
 test("adds animations, gamification polish and dark mode support", () => {
+  const nativeImplementationSource = [
+    rootLayoutSource,
+    routeDependenciesSource,
+    appDependenciesSource,
+    appRootSource,
+    appPresentationSource,
+    appIntroScreensSource,
+    appStylesSource,
+    screenTransitionSource,
+    homeScreenSource,
+    themeSource
+  ].join("\n");
+
   const requiredAppTokens = [
     "Animated",
     "ScreenTransition",
     "useAnimatedEntrance",
-    "AnimatedProgressBar",
     "LinearGradient",
     "logoAsset",
     "Animated.Image",
@@ -120,7 +164,7 @@ test("adds animations, gamification polish and dark mode support", () => {
   ];
 
   for (const token of requiredAppTokens) {
-    assert.match(appSource, new RegExp(token));
+    assert.match(nativeImplementationSource, new RegExp(token));
   }
 
   const requiredContentTokens = ["Conquista", "Sequência", "XP", "Nível", "Modo escuro"];
